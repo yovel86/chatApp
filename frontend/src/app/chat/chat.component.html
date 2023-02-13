@@ -1,0 +1,34 @@
+<p>Hello {{ userName }}, Welcome to the Commnunity!</p>
+
+<section class="chat-container">
+  
+  <div class="chat-with">
+    <h3 id="userName" [routerLink]="['/']">{{ userName }}</h3>
+    <h3>Chat With</h3>
+    <select name="chat-with" (change)="clearChat()" #room>
+      <option value="public">Public</option>
+      <option *ngFor="let user of listOfUsers" value="{{ user.id }}">{{ user.userName }}</option>
+    </select>
+    <button class="joinBtn" (click)="joinRoom(room.value)">Join</button>
+    <button class="leaveBtn" (click)="leaveRoom(room.value)">Leave</button>
+  </div>
+
+  <div class="chat-area">
+    
+    <p *ngFor="let msg of msgArray">
+      <strong>{{ msg.userName }}</strong>: {{ msg.message }}
+    </p>
+
+  </div>
+
+  <div class="chat-input">
+    <input type="text" placeholder="Type your message..." #text>
+    <button (click)="sendMessage(text.value)" (click)="text.value = ''">Send</button>
+  </div>
+
+</section>
+
+<div class="alertMsgBox">
+  <span style="position: relative;"><p class="alertMsg" #alert></p></span>
+</div>
+

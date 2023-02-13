@@ -1,0 +1,83 @@
+
+.container {
+  height: 70vh;
+  /* background-image: linear-gradient(rgba(0, 128, 128, 0.6) 60%, aliceblue); */
+  background-color: rgba(0, 128, 128, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10vh 20vw;
+  border-radius: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+h1 {
+  font-size: 5rem;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-top: -80px;
+}
+
+input {
+  width: 70%;
+  padding: 1rem;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 1.2rem;
+  border: none;
+  color: rgb(95, 95, 95);
+  box-shadow: 0 0 10px 5px rgba(3, 255, 255, 0.5);
+  caret-color: rgba(0, 128, 128);
+}
+
+input:focus-visible {
+  outline: none;
+}
+
+button {
+  padding: .8rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  background-color: rgb(1, 110, 110);
+  color: aliceblue;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: -70px;
+  text-transform: uppercase;
+  transition: all .4s;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+  scale: 1.1;
+  color: rgb(1, 110, 110);
+  background-color: aliceblue;
+  box-shadow: 0 0 10px 5px rgba(3, 255, 255, 0.5);
+}
+
+/* Animation for text */
+.expand-text {
+	animation: expand-text .8s ease both;
+}
+
+@keyframes expand-text {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
